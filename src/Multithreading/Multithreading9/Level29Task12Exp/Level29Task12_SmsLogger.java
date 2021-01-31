@@ -1,0 +1,14 @@
+package Multithreading.Multithreading9.Level29Task12Exp;
+
+public class Level29Task12_SmsLogger extends Level29Task12_AbstractLogger {
+
+    public Level29Task12_SmsLogger(int level) {
+        super(level);
+
+    }
+    @Override
+    public void info(String message) {
+        System.out.println("Send SMS to CEO: " + message);
+    }
+}
+

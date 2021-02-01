@@ -36,7 +36,7 @@ public class Solution {
             //напишите тут ваш код
             try {
                 // Создание обьекта "Реестр удаленных объектов" Порт, такой же как у сервера
-                final Registry registry = LocateRegistry.getRegistry("localhost",2099);
+                //final Registry registry = LocateRegistry.getRegistry("localhost",2099);
                 // Получаем объект у реестра
                 DoubleString service = (DoubleString) registry.lookup(UNIC_BINDING_NAME);
                 // Вызываем метод у интерфейса

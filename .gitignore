@@ -27,6 +27,7 @@ out/
 target/
 Books/
 Exp/
+lib/
 
 
 # Default ignored files

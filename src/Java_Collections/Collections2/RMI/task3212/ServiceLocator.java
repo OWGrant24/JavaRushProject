@@ -48,6 +48,8 @@ public class ServiceLocator {
         }
          // А если нет - то произойдет логика инициализации
         InitialContext context = new InitialContext();
-        return (Service) context.lookup(jndiName);
+        Service service1 = (Service) context.lookup(jndiName);
+        cache.addService(service1);
+        return service1;
     }
 }

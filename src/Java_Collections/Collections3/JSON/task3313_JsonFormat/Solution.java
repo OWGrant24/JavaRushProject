@@ -1,4 +1,4 @@
-package Java_Collections.Collections3.JSON.task3313;
+package Java_Collections.Collections3.JSON.task3313_JsonFormat;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

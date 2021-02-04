@@ -1,11 +1,10 @@
 package Java_Collections.Collections3.JSON.task3311;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@JsonAutoDetect
 public class RealBean {
     protected final int id;
     protected final String name;
@@ -25,7 +24,7 @@ public class RealBean {
     public String getName() {
         return name;
     }
-
+    @JsonAnyGetter
     public Map<String, Object> getAdditionalMap() {
         return additionalMap;
     }

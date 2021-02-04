@@ -1,4 +1,5 @@
-package Java_Collections.Collections3.JSON.task3301;
+package Java_Collections.Collections3.JSON.task3301_JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -47,18 +48,18 @@ public class Solution {
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(writer, object);
     }
-
+    @JsonAutoDetect
     public static class Pet {
-        String name;
+        public String name;
     }
-
+    @JsonAutoDetect
     public static class Cat extends Pet {
-        int age;
-        int weight;
+        public int age;
+        public int weight;
     }
-
+    @JsonAutoDetect
     public static class Dog extends Pet {
-        int age;
-        String owner;
+        public int age;
+        public String owner;
     }
 }

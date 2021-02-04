@@ -1,5 +1,7 @@
 package Java_Collections.Collections3.JSON.task3303;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.IOException;
 
 /*
@@ -19,7 +21,8 @@ import java.io.IOException;
 
 public class Solution {
     public static <T> T convertFromJsonToNormal(String fileName, Class<T> clazz) throws IOException {
-        return null;
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.readValue(fileName,clazz);
     }
 
     public static void main(String[] args) {

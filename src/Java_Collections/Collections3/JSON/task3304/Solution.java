@@ -2,6 +2,7 @@ package Java_Collections.Collections3.JSON.task3304;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 
@@ -10,7 +11,8 @@ import java.io.IOException;
 НЕОБХОДИМО: подключенные библиотеки Jackson Core, Bind и Annotation версии 2.6.1
 
 Два класса имеют одинаковые поля, но не имеют общий суперкласс. Пример, классы First и Second.
-Реализовать логику метода convertOneToAnother, который должен возвращать объект класса resultClassObject, значения полей которого равны значениям полей в объекте one.
+Реализовать логику метода convertOneToAnother, который должен возвращать объект класса resultClassObject,
+ значения полей которого равны значениям полей в объекте one.
 Используй объект типа ObjectMapper.
 Известно, что у классов есть JSON аннотация, у которой значение property равно имени класса в нижнем регистре.
 На примере класса First, это className="first"
@@ -30,6 +32,7 @@ public class Solution {
     }
 
     public static Object convertOneToAnother(Object one, Class resultClassObject) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
         return null;
     }
 

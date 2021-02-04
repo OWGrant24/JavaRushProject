@@ -29,7 +29,10 @@ public class Solution {
     }
 
     public static <T> T convertFromXmlToNormal(String xmlData, Class<T> clazz) throws IOException, JAXBException {
-        return null;
+        StringReader stringReader = new StringReader(xmlData);
+        JAXBContext context = JAXBContext.newInstance(clazz);
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        return (T) unmarshaller.unmarshal(stringReader);
     }
 
     @XmlType(name = "cat")

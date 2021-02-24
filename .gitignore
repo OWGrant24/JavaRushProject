@@ -25,11 +25,9 @@ Thumbs.db
 other/
 out/
 target/
+release/
+debug/
 Books/
 Exp/
 lib/
-
-
-# Default ignored files
-/shelf/
-/workspace.xml
+articles/

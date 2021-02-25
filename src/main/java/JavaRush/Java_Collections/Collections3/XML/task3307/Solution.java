@@ -8,8 +8,7 @@ import javax.xml.bind.annotation.XmlType;
 import java.io.IOException;
 import java.io.StringReader;
 
-/*
-Десериализация XML объекта
+/* Десериализация XML объекта
 В метод convertFromXmlToNormal первым параметром приходит строка, содержащая xml объект.
 Вторым параметром приходит класс, объект которого необходимо вернуть.
 Метод convertFromXmlToNormal должен создать объект из xml-строки и вернуть его.
@@ -28,7 +27,7 @@ public class Solution {
         System.out.println(cat);
     }
 
-    public static <T> T convertFromXmlToNormal(String xmlData, Class<T> clazz) throws IOException, JAXBException {
+    public static <T> T convertFromXmlToNormal(String xmlData, Class<T> clazz) throws JAXBException {
         StringReader stringReader = new StringReader(xmlData);
         JAXBContext context = JAXBContext.newInstance(clazz);
         Unmarshaller unmarshaller = context.createUnmarshaller();

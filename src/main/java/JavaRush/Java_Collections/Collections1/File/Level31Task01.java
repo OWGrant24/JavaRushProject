@@ -1,4 +1,4 @@
-package JavaRush.Java_Collections.Collections1;
+package JavaRush.Java_Collections.Collections1.File;
 
 import java.io.*;
 import java.util.*;

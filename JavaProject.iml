@@ -14,5 +14,7 @@
     <orderEntry type="library" name="org.glassfish.jaxb:jaxb-runtime:2.3.3" level="project" />
     <orderEntry type="library" name="commons-io:commons-io:2.8.0" level="project" />
     <orderEntry type="library" name="org.junit.jupiter:junit-jupiter-api:5.7.1" level="project" />
+    <orderEntry type="library" name="org.slf4j:slf4j-api:1.7.30" level="project" />
+    <orderEntry type="library" name="com.google.guava:guava:18.0" level="project" />
   </component>
 </module>

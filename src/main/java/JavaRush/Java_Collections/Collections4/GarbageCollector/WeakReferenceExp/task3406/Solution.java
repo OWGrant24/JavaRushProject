@@ -1,17 +1,16 @@
-package JavaRush.Java_Collections.Collections4.task3405;
-
-import java.lang.ref.SoftReference;
+package JavaRush.Java_Collections.Collections4.GarbageCollector.WeakReferenceExp.task3406;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
 /*
-Мягкие ссылки
+Слабые ссылки
 Разберись в примере.
-Внутри метода main после создания объекта типа Monkey создай мягкую ссылку (SoftReference) на него.
+Внутри метода main после создания объекта типа Monkey создай слабую ссылку (WeakReference) на него.
 
 Требования:
 В методе main должен быть создан объект типа Monkey с именем "Simka".
-В методе main должен быть создан SoftReference на объект monkey.
+В методе main должен быть создан WeakReference на объект monkey.
 Класс Monkey должен быть публичным.
 Класс Monkey должен быть статическим.
 */
@@ -32,12 +31,13 @@ public class Solution {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String args[]) throws InterruptedException {
         helper.startTime();
 
         Monkey monkey = new Monkey("Simka");
 
         //Add reference here
+        WeakReference<Monkey> reference = new WeakReference<>(monkey); // Слабая ссылка
 
         helper.callGC();
 
@@ -46,8 +46,8 @@ public class Solution {
         helper.callGC();
         helper.consumeHeap();
 
-//        if (reference.get() == null)
-//            System.out.println("Finalized");
+        if (reference.get() == null)
+            System.out.println("Finalized");
 
         helper.finish();
     }

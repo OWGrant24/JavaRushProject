@@ -1,4 +1,4 @@
-package JavaRush.Java_Collections.Collections4.Recursion.task3403;
+package JavaRush.Java_Collections.Collections4.Recursion.task3403_Simple_Multipliers;
 
 /*
 Разложение на множители с помощью рекурсии
@@ -20,7 +20,20 @@ package JavaRush.Java_Collections.Collections4.Recursion.task3403;
 Метод recurse должен быть рекурсивным.
 */
 
-public class Solution {
+public class Solution {  // n
     public void recurse(int n) {
+        if (n <= 1)
+            return;
+        for (int i = 2; i <= n; i++) {
+            if (n % i == 0) {
+                System.out.print(i + " ");
+                recurse(n / i);
+                break;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new Solution().recurse(5);
     }
 }

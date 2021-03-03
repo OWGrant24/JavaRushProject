@@ -1,0 +1,10 @@
+package JavaRush.Java_Collections.Collections5.task3501;
+/*
+Измени статический метод в классе GenericStatic так, чтобы он стал дженериком.
+Пример вызова дан в методе main.
+ */
+public class Solution {
+    public static void main(String[] args) {
+        Number number = GenericStatic.<Number>someStaticMethod(new Integer(3));
+    }
+}

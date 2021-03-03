@@ -1,4 +1,4 @@
-package JavaRush.Java_Collections.Collections4.Recursion.task3402;
+package JavaRush.Java_Collections.Collections4.Recursion.task3402_Factorial;
 
 /*
 Факториал с помощью рекурсии
@@ -23,7 +23,12 @@ public class Solution {
     }
 
     public int factorial(int n) {
-        return 0;
+        if (n <= 1) {
+            return 1;
+        }
+        else {
+            return n * factorial(n - 1);
+        }
     }
 }
 

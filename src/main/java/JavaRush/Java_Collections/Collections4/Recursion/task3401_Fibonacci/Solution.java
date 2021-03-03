@@ -1,4 +1,4 @@
-package JavaRush.Java_Collections.Collections4.Recursion.task3401;
+package JavaRush.Java_Collections.Collections4.Recursion.task3401_Fibonacci;
 /* Числа Фибоначчи с помощью рекурсии
 
 Почитай про числа Фибоначчи.
@@ -22,6 +22,12 @@ public class Solution {
     }
 
     public int fibonacci(int n) {
-        return 0;
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
     }
 }

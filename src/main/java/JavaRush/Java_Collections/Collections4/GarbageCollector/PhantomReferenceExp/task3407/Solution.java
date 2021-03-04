@@ -83,14 +83,11 @@ public class Solution {
         public List<PhantomReference<Monkey>> getPopulatedList() {
             // Специальная очередь для призрачных обьектов
             ReferenceQueue<Monkey> referenceQueue = helper.getQueue();
-
             // Список прозрачных ссылок
             List<PhantomReference<Monkey>> phantomReferences = new ArrayList<>();
-
             for( int i = 0 ; i < 200 ; i++){
                 phantomReferences.add(new PhantomReference<>(new Monkey(), referenceQueue));
             }
-
             return phantomReferences;
         }
 

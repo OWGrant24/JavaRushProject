@@ -22,7 +22,7 @@ trace - 4 раза - используй для отслеживания пути
 Сообщения в логах старайся писать информативные.
 Остальной код не изменяй.
  */
-public class Solution {
+public class Solution { // copy
     private static final Logger logger = LoggerFactory.getLogger(Solution.class);
 
     private int value1;

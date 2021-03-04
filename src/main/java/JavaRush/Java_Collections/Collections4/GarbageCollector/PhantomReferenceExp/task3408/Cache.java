@@ -10,12 +10,13 @@ public class Cache<K, V> {
 
     public V getByKey(K key, Class<V> clazz) throws Exception {
         //TODO add your code here
-        if (cache.get(key) != null) {
-            return cache.get(key);
-        } else {
+        if (!cache.containsKey(key)) {
             Class<?> clazzNew = Class.forName(clazz.getName());
-            return (V) clazzNew.getDeclaredConstructor().newInstance();
+            V value = (V) clazzNew.getConstructor(key.getClass()).newInstance(key);
+            cache.put(key, value);
         }
+
+        return cache.get(key);
 
     }
 
@@ -23,9 +24,9 @@ public class Cache<K, V> {
         try {
             Method method = obj.getClass().getDeclaredMethod("getKey");
             method.setAccessible(true);
-            Object result = method.invoke(obj);
-            return cache.put((K) result, obj) != null;
-
+            Object key = method.invoke(obj);
+            cache.put((K) key, obj);
+            return true;
         } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             e.printStackTrace();
         }

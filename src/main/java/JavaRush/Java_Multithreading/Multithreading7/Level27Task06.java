@@ -37,18 +37,8 @@ public class Level27Task06 {
         final Object o2 = new Object();
         final Level27Task06 solution = new Level27Task06();
 
-        new Thread() {
-            @Override
-            public void run() {
-                solution.safeMethod(o1, o2);
-            }
-        }.start();
+        new Thread(() -> solution.safeMethod(o1, o2)).start();
 
-        new Thread() {
-            @Override
-            public void run() {
-                solution.safeMethod(o2, o1);
-            }
-        }.start();
+        new Thread(() -> solution.safeMethod(o2, o1)).start();
     }
 }

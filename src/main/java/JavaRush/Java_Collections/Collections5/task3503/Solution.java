@@ -1,4 +1,5 @@
 package JavaRush.Java_Collections.Collections5.task3503;
+
 /*
 Дан класс Solution, параметризированный T.
 Ограничьте параметр T.
@@ -7,22 +8,23 @@ T должен быть наследником класса ClassForGenerics и
 Менять можно только класс Solution.
 
 Требования:
-Класс Solution должен быть параметризирован типом который является наследником класса ClassForGenerics и одновременно реализовывать интерфейс InterfaceForGenerics.
+Класс Solution должен быть параметризирован типом который является наследником класса ClassForGenerics
+и одновременно реализовывать интерфейс InterfaceForGenerics.
 Интерфейс InterfaceForGenerics не должен расширять другие интерфейсы.
 Класс ClassForGenerics не должен поддерживать интерфейс InterfaceForGenerics.
 Класс Solution не должен быть наследником класса ClassForGenerics.
  */
-public class Solution <T>{
+public class Solution<T extends ClassForGenerics & InterfaceForGenerics> {
     public static void main(String[] args) {
         Solution<TestClassGood> testClassSolution = new Solution<>();
         testClassSolution.check();
 
         //!!! Следующие оба варианта не должны работать, закомментируй их:
-        Solution<TestClassWrong1> wrong1Solution = new Solution<>();
-        wrong1Solution.check();
-
-        Solution<TestClassWrong2> wrong2Solution = new Solution<>();
-        wrong2Solution.check();
+//        Solution<TestClassWrong1> wrong1Solution = new Solution<>();
+//        wrong1Solution.check();
+//
+//        Solution<TestClassWrong2> wrong2Solution = new Solution<>();
+//        wrong2Solution.check();
     }
 
     public void check() {
